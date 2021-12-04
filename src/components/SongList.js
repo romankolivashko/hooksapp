@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NewSongForm from './NewSongForm';
+import styles from './EventList.module.css';
 
 const SongList = () => {
   const [songs, setSongs] = useState([
@@ -15,7 +16,7 @@ const SongList = () => {
     <div className="song-list">
       <ul>
         {songs.map(song => {
-          return ( <li key={song.id}>{song.title}</li>);
+          return ( <li className={styles.card} key={song.id}>{song.title}</li>);
         })}
       </ul>
       {/* <button onClick={addSong}>Add Song</button> */}
