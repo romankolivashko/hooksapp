@@ -19,7 +19,7 @@ function App() {
         <h2>10% Off Coupon Code!!</h2>
         <p>Use Code FREE10 at the checkout</p>
       </Modal> */}
-      {showModal && <Modal handleClose={handleClose}>
+      {showModal && <Modal handleClose={handleClose} isSalesModal={false}>
         <h2>Terms and Conditions</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus autem, et hic corporis sed numquam eos itaque corrupti neque optio adipisci vitae molestiae quaerat. Harum rerum fuga eos! Quae.</p>
         <a href="#">find out more...</a>
