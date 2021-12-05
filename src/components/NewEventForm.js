@@ -15,9 +15,21 @@ function NewEventForm() {
   //   setTitle(e.target.value);
   // }
   
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const event = {
+       title: title,
+       date: date,
+       id: Math.floor(Math.random() * 10000)
+    }
+    console.log(event);
+    resetForm()
+  }
+
   return (
     <div>
-      <form className="new-event-form">
+      <form className="new-event-form" onSubmit={handleSubmit}>
         <label>
           <span>Event Title:</span>
           <input 
